@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will not be visible initially.
+  </div>
+  <script>
+    // Incorrect way to manipulate the innerHTML property leading to unexpected behavior
+    document.getElementById("myDiv").innerHTML = "<p>This text should be visible.</p>" + document.getElementById("myDiv").innerHTML;
+  </script>
+</body>
+</html>
