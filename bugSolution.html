@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will not be visible initially.
+  </div>
+  <script>
+    // Correct way to manipulate the innerHTML property using insertAdjacentHTML
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = 'This text should be visible.';
+    document.getElementById("myDiv").appendChild(newParagraph);
+    //Alternative, safer solution using insertAdjacentHTML
+    //document.getElementById("myDiv").insertAdjacentHTML('beforeend', '<p>This text should be visible.</p>');
+  </script>
+</body>
+</html>
